@@ -1,0 +1,29 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Skeleton\\": "src/Domain",
+            "Application\\": "src/Application",
+            "Infrastructure\\": "src/Infrastructure",
+            "Skeleton\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "symfony/console": "^5.0",
+        "symfony/framework-bundle": "^5.0",
+        "symfony/yaml": "^5.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "symfony/dotenv": "^5.0",
+        "symfony/phpunit-bridge": "^5.0"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}

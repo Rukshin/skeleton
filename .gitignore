@@ -1,0 +1,7 @@
+/.env.*.local
+/.phpunit.result.cache
+/bin/
+/phpunit.xml
+/var/
+/vendor/
+/docker-compose.yml

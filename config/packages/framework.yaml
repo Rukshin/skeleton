@@ -1,0 +1,13 @@
+framework:
+    php_errors:
+        log: true
+
+    secret: '%env(APP_SECRET)%'
+
+    session:
+        handler_id: ~
+        cookie_secure: auto
+        cookie_samesite: lax
+
+parameters:
+    container.dumper.inline_class_loader: true

@@ -1,0 +1,29 @@
+version: '3.6'
+
+networks:
+    default:
+        name: docker
+
+services:
+  fpm:
+    build:
+      context: etc/docker/dev/fpm
+      args:
+        # Change the following values if differ from your local gid/uid
+        GROUP_ID: 1000
+        USER_ID: 1000
+    container_name: skeleton-fpm
+    volumes:
+        - .:/var/www/skeleton:cached
+    working_dir: /var/www/skeleton
+    links:
+        - redis
+    environment:
+        PHP_IDE_CONFIG: "serverName=skeleton"
+        XDEBUG_CONFIG: "remote_host=host.docker.internal" # For mac and windows
+#       XDEBUG_CONFIG: "remote_host=172.17.0.1" # For linux users
+
+  redis:
+    image: redis:4-alpine
+    container_name: skeleton-redis
+

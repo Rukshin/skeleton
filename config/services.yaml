@@ -1,0 +1,20 @@
+parameters:
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Infrastructure\:
+        resource: '%kernel.src_dir%/Infrastructure'
+        exclude:
+            - '%kernel.src_dir%/Infrastructure/Framework/{DependencyInjection,Kernel.php}'
+
+#    Application\:
+#        resource: '%kernel.src_dir%/Application'
+
+#    `Skeleton\BoundedContext\:
+#        resource: '%kernel.src_dir%/Domain/BoundedContext'
+
+#    Skeleton\AnotherBoundedContext\:
+#        resource: '%kernel.src_dir%/Domain/AnotherBoundedContext'
